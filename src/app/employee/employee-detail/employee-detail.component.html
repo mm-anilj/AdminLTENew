@@ -1,0 +1,10 @@
+<div *ngIf="employee">
+  <h3>"{{ editName }}"</h3>
+  <div>
+    <label>Id: </label>{{ employee.id }}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="editName" placeholder="name"/>
+  </div>
+ 
+</div>

@@ -1,0 +1,190 @@
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Search Filters</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <label>Employee Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-lg-3">
+                            <label>Employee Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-lg-3">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control" data-inputmask="&quot;mask&quot;: &quot;999-999-9999&quot;" data-mask="">
+                        </div>
+                        <div class="col-lg-3">
+                            <label>Status</label>
+                            <select class="form-control">
+                                <option value="-1">All</option>
+                                <option value="1" selected="selected">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                    <a class="btn btn-info pull-right" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add Employee</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Employees</h3>
+                </div>
+                <div class="box-body">
+                    <div id="tblEmployee_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="tblEmployee_length"><label>Show <select name="tblEmployee_length" aria-controls="tblEmployee" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="tblEmployee_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="tblEmployee"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="tblEmployee" class="table table-bordered table-striped table-responsive dataTable no-footer" role="grid" aria-describedby="tblEmployee_info">
+                        <thead>
+                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Employee Number: activate to sort column descending" style="width: 179px;">Employee Number</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="First Name: activate to sort column ascending" style="width: 112px;">First Name</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Last Name: activate to sort column ascending" style="width: 109px;">Last Name</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Phone Number: activate to sort column ascending" style="width: 149px;">Phone Number</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 66px;">Email</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 73px;">Status</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Total Submitted: activate to sort column ascending" style="width: 158px;">Total Submitted</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Total Paid: activate to sort column ascending" style="width: 104px;">Total Paid</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Total Rejected: activate to sort column ascending" style="width: 143px;">Total Rejected</th><th class="sorting" tabindex="0" aria-controls="tblEmployee" rowspan="1" colspan="1" aria-label="Total Pending: activate to sort column ascending" style="width: 139px;">Total Pending</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr role="row" class="odd">
+                                <td class="sorting_1">
+                                
+                                        <a [routerLink]="['/transaction']" [queryParams]="{ EMPNO: '121'}"style="text-decoration:underline;">
+                                            121
+                                          </a>
+                                    <!-- <a routerLink="/transaction/1"  style="text-decoration:underline;">123</a> -->
+                                </td>
+                                <td>Fname</td>
+                                <td>Lname</td>
+                                <td>1234567890</td>
+                                <td>1@1.com</td>
+                                <td>Active</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr><tr role="row" class="even">
+                                <td class="sorting_1">
+                                        <a [routerLink]="['/transaction']" [queryParams]="{ EMPNO: '121'}"style="text-decoration:underline;">
+                                            121
+                                          </a>
+                                </td>
+                                <td>Fname</td>
+                                <td>Lname</td>
+                                <td>1234567890</td>
+                                <td>1@1.com</td>
+                                <td>Active</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr><tr role="row" class="odd">
+                                <td class="sorting_1">
+                                
+                                        <a [routerLink]="['/transaction']" [queryParams]="{ EMPNO: '121'}"style="text-decoration:underline;">
+                                            121
+                                          </a>
+                                </td>
+                                <td>Fname</td>
+                                <td>Lname</td>
+                                <td>1234567890</td>
+                                <td>1@1.com</td>
+                                <td>Active</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr><tr role="row" class="even">
+                                <td class="sorting_1">
+                                        <a [routerLink]="['/transaction']" [queryParams]="{ EMPNO: '121'}"style="text-decoration:underline;">
+                                            121
+                                          </a>
+                                </td>
+                                <td>Fname</td>
+                                <td>Lname</td>
+                                <td>1234567890</td>
+                                <td>1@1.com</td>
+                                <td>Active</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr><tr role="row" class="odd">
+                                <td class="sorting_1"><a [routerLink]="['/transaction']" [queryParams]="{ EMPNO: '121'}"style="text-decoration:underline;">
+                                    121
+                                  </a></td>
+                                <td>Fname</td>
+                                <td>Lname</td>
+                                <td>1234567890</td>
+                                <td>1@1.com</td>
+                                <td>Active</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr></tbody>
+                    </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="tblEmployee_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="tblEmployee_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="tblEmployee_previous"><a href="#" aria-controls="tblEmployee" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="tblEmployee" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="tblEmployee_next"><a href="#" aria-controls="tblEmployee" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Add Employee</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-horizontal">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">First Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtFirstName" placeholder="Employee First Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Last Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtLastName" placeholder="Employee Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Phone Number:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtPhoneNumber" placeholder="Employee Phone Number" data-inputmask="&quot;mask&quot;: &quot;999-999-9999&quot;" data-mask="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Email:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="txtPhoneNumber" placeholder="Employee Email ID">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Status:</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option value="1">Active</option>
+                                        <option value="0" selected="selected">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+ <router-outlet></router-outlet>

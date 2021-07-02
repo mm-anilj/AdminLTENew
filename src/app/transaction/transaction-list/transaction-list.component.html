@@ -1,0 +1,201 @@
+<section class="content">
+<div *ngIf="transaction !== null">
+        <div class="row">
+                <div class="col-lg-12">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Search Filters</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label>Employee Number: </label>
+                                    <input [(ngModel)]="EMPNO" class="form-control" />
+                                   
+                                </div>
+                                <div class="col-lg-3">
+                                    <label>Submission Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control pull-right datepicker" [(ngModel)]="SDate" onkeypress="return false;" id="txtSubmissionDate">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label>Paid Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control pull-right datepicker" [(ngModel)]="PDate" onkeypress="return false;" id="txtPaidDate">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- <input [(ngModel)]="Status" class="form-control" /> -->
+                                <div class="col-lg-3">
+                                    <label>Payment Status</label>
+                                    <!-- <select class="form-control" id="ddlPaymentStatus" [(ngModel)]="Status">
+                                        <option value="-1">ALL</option>
+                                        <option *ngIf([value]="Status")>Pending</option>
+                                        <option value="2">Approved</option>
+                                        <option [value]="Status">Rejected</option>
+                                        <option value="4">Paid</option>
+                                        
+                                    </select> -->
+
+                                    <select  class='form-control' [(ngModel)]="Status">
+                                    <option value="undefined">ALL</option>
+                                    <option value='Pending'>Pending</option>
+                                    <option value='Approved'>Approved</option>
+                                    <option value='Rejected'>Rejected</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                            <button type="reset" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <!-- <div *ngIf="transaction === null">
+            <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Search Filters</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <label>Employee Number: </label>
+                                        <input [(ngModel)]="editName" placeholder="name"  class="form-control" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label>Submission Date</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control pull-right datepicker" onkeypress="return false;" id="txtSubmissionDate">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label>Paid Date</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control pull-right datepicker" onkeypress="return false;" id="txtPaidDate">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label>Payment Status</label>
+                                        <select class="form-control" id="ddlPaymentStatus">
+                                            <option value="-1">All</option>
+                                            <option value="1">Pending</option>
+                                            <option value="2">Approved</option>
+                                            <option value="3">Rejected</option>
+                                            <option value="4">Paid</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div> -->
+          
+
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="box box-primary">
+              <div class="box-header with-border">
+                  <h3 class="box-title">Transaction</h3>
+              </div>
+              <div class="box-body">
+                  <div id="tblTransactions_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6">
+                    <div class="dataTables_length" id="tblTransactions_length"><label>Show <select name="tblTransactions_length" aria-controls="tblTransactions" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="tblTransactions_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="tblTransactions"></label></div></div></div><div class="row"><div class="col-sm-12">
+                      <table id="tblTransactions" class="table table-bordered table-striped table-responsive dataTable no-footer" role="grid" aria-describedby="tblTransactions_info">
+                      <thead>
+                          <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Employee Number: activate to sort column descending" style="width: 179px;">Employee Number</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="First Name: activate to sort column ascending" style="width: 112px;">First Name</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Last Name: activate to sort column ascending" style="width: 109px;">Last Name</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Phone Number: activate to sort column ascending" style="width: 149px;">Phone Number</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 66px;">Email</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 73px;">Status</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Total Submitted: activate to sort column ascending" style="width: 158px;">Total Submitted</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Total Paid: activate to sort column ascending" style="width: 104px;">Total Paid</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Total Rejected: activate to sort column ascending" style="width: 143px;">Total Rejected</th><th class="sorting" tabindex="0" aria-controls="tblTransactions" rowspan="1" colspan="1" aria-label="Total Pending: activate to sort column ascending" style="width: 139px;">Total Pending</th></tr>
+                      </thead>
+                      <tbody>
+                      <tr role="row" class="odd">
+                              <td class="sorting_1">121</td>
+                              <td>Fname</td>
+                              <td>Lname</td>
+                              <td>1234567890</td>
+                              <td>1@1.com</td>
+                              <td>Pending</td>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>2</td>
+                          </tr><tr role="row" class="even">
+                              <td class="sorting_1">121</td>
+                              <td>Fname</td>
+                              <td>Lname</td>
+                              <td>1234567890</td>
+                              <td>1@1.com</td>
+                              <td>Approved</td>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>2</td>
+                          </tr><tr role="row" class="odd">
+                              <td class="sorting_1">121</td>
+                              <td>Fname</td>
+                              <td>Lname</td>
+                              <td>1234567890</td>
+                              <td>1@1.com</td>
+                              <td>Approved</td>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>2</td>
+                          </tr><tr role="row" class="even">
+                              <td class="sorting_1">123</td>
+                              <td>Fname</td>
+                              <td>Lname</td>
+                              <td>1234567890</td>
+                              <td>1@1.com</td>
+                              <td>Rejected</td>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>2</td>
+                          </tr><tr role="row" class="odd">
+                              <td class="sorting_1">121</td>
+                              <td>Fname</td>
+                              <td>Lname</td>
+                              <td>1234567890</td>
+                              <td>1@1.com</td>
+                              <td>Paid</td>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>2</td>
+                          </tr></tbody>
+                  </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="tblTransactions_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="tblTransactions_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="tblTransactions_previous"><a href="#" aria-controls="tblTransactions" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="tblTransactions" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="tblTransactions_next"><a href="#" aria-controls="tblTransactions" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<script>
+  $(function () {
+      $("#tblTransactions").DataTable();
+      $("#txtSubmissionDate").datepicker({
+          autoclose: true
+      });
+  });
+</script>
+<router-outlet></router-outlet>

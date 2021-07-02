@@ -1,0 +1,54 @@
+<div *ngIf="transaction">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Search Filters</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label>Employee Number: </label>
+                                <input [(ngModel)]="editName" placeholder="name"  class="form-control" />
+                            </div>
+                            <div class="col-lg-3">
+                                <label>Submission Date</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control pull-right datepicker" onkeypress="return false;" id="txtSubmissionDate">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <label>Paid Date</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control pull-right datepicker" onkeypress="return false;" id="txtPaidDate">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <label>Payment Status</label>
+                                <select class="form-control" id="ddlPaymentStatus">
+                                    <option value="-1">All</option>
+                                    <option value="1">Pending</option>
+                                    <option value="2">Approved</option>
+                                    <option value="3">Rejected</option>
+                                    <option value="4">Paid</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div>
+      <div>
+      </div>
+    </div>  
